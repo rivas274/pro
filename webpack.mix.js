@@ -1,7 +1,6 @@
 const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    //.extract(['vue','axios','jquery']).version()
    .js('resources/assets/js/app-landing.js', 'public/js/app-landing.js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .less('node_modules/bootstrap-less/bootstrap/bootstrap.less', 'public/css/bootstrap.css')
