@@ -23,10 +23,7 @@ Route::group(['middleware' => 'auth'], function () {
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
     #adminlte_routes
 });
-<<<<<<< HEAD
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-=======
->>>>>>> 2b7b1d90544c4ad170b9ed797d3283147c5f18ac
+
