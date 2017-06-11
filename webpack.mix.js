@@ -1,7 +1,7 @@
 const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue','axios','jquery']).version()
+    /*.extract(['vue','axios','jquery']).version()*/
     .sass('resources/assets/sass/app.scss', 'public/css').version()
     .browserSync('pro.app');
 /* para integrar estylos de una plantilla

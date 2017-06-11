@@ -9,8 +9,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <script src="{{ mix('/js/manifest.js') }}"></script>
-        <script src="{{ mix('/js/vendor.js') }}"></script>
+        <!--<script src="{{ mix('/js/manifest.js') }}"></script>
+        <script src="{{ mix('/js/vendor.js') }}"></script>-->
         <script src="{{ mix('/js/app.js') }}"></script>
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <!-- Styles -->
