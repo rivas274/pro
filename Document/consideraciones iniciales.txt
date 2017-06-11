@@ -1,0 +1,8 @@
+PARÁMETROS DE DESARROLLO.
+
+1. El entorno de trabajo es Laravel
+2. Emplear la herramienta de jQuery
+3. Usaremos como BD MySql
+4. Emplear la libreria de Boostrap 4 para estilos estandar
+5. Para la personalizacion de estilos se usará SASS
+6. Se usará una herramienta frontend llamada larevel mix para que compile todo el CSS y js
