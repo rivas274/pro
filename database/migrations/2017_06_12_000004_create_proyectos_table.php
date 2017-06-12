@@ -20,7 +20,7 @@ class CreateProyectosTable extends Migration {
 			$table->date('fechaInicio');
 			$table->date('fechaFin')->nullable();
 			$table->integer('idCliente')->unsigned();
-            $table->foreign('idCliente')->references('id')->on('clientes');
+            $table->foreign('idCliente')->references('id')->on('clientes')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

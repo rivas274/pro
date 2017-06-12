@@ -13,14 +13,12 @@ class CreateColaboradoresProyectosTable extends Migration {
 	public function up()
 	{
 		Schema::create('colaboradoresProyectos', function(Blueprint $table)
-		{
-			$table->increments('id');
-			
+		{	
 			$table->integer('idProyecto')->unsigned();
-            $table->foreign('idProyecto')->references('id')->on('proyectos');
+            $table->foreign('idProyecto')->references('id')->on('proyectos')->onDelete('cascade');
 
 			$table->integer('idColaborador')->unsigned();
-            $table->foreign('idColaborador')->references('id')->on('colaboradores');
+            $table->foreign('idColaborador')->references('id')->on('colaboradores')->onDelete('cascade');
 
 			$table->primary(['idProyecto','idColaborador']);
 			$table->timestamps();
