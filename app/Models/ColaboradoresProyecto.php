@@ -18,7 +18,7 @@ class ColaboradoresProyecto extends Model
         'idColaborador'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

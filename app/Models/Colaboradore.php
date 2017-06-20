@@ -22,7 +22,7 @@ class Colaboradore extends Model
         'idRazonSocial'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

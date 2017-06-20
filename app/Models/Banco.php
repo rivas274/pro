@@ -17,7 +17,7 @@ class Banco extends Model
         'nombre'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

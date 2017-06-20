@@ -22,7 +22,7 @@ class Pago extends Model
         'idTipoPago'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

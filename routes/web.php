@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/bancos', 'BancosController@index')->name('bancos');
+
+Route::get('/bancos/create', 'BancosController@create')->name('bancosCreate');
+
+Route::post('/bancos', 'BancosController@store')->name('bancoStore');
+
+Route::get('/bancos/{banco}', 'BancosController@show')->name('bancoShow');

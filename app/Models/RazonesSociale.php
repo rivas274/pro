@@ -18,7 +18,7 @@ class RazonesSociale extends Model
         'descripcion'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

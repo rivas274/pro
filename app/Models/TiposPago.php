@@ -17,7 +17,7 @@ class TiposPago extends Model
         'nombre'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

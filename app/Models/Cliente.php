@@ -20,7 +20,7 @@ class Cliente extends Model
         'idRazonSocial'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }

@@ -21,7 +21,7 @@ class Proyecto extends Model
         'idCliente'
     ];
 
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
         
 }
