@@ -1,6 +1,6 @@
 {
   "name": "proyecto",
-  "version": "0.1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "npm run development",
@@ -15,6 +15,7 @@
     "axios": "^0.15.3",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
     "laravel-mix": "0.*",
     "lodash": "^4.17.4",

@@ -1,18 +1,22 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Banco</div>
-                    <li>
-                    {{ $banco->nombre }}
-                    </li>
-                <div class="panel-body">
-                </div>
-            </div>
+@component('component.container')
+    @slot('title')
+        <div >
+            Banco
+            <a  class="btn btn-sm btn-primary pull-right" 
+                title="List"
+                href="{{ route('bancos') }}">
+                Return
+            </a>
         </div>
-    </div>
-</div>
+    @endslot
+    @slot('content')
+        <ul>
+            <li>
+                {{ $banco->nombre }}
+            </li>
+        </ul>
+    @endslot
+@endcomponent
 @endsection
