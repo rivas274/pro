@@ -20,7 +20,7 @@ class BancosController extends Controller
     public function create(Banco $banco){
         return view('bancos.create');
     }
-    public function store(CreatePostRequest $request){
+    public function store(CreateBancosRequest $request){
         //DB::connection()->enableQueryLog();
         $bancos=New Banco;
         $bancos->fill($request->all())->save();
