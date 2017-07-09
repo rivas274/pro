@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Banco;
-use App\Http\Requests\CreatePostRequest;
+use App\Http\Requests\CreateBancosRequest;
 //use DB; 
 
 class BancosController extends Controller
@@ -17,14 +17,28 @@ class BancosController extends Controller
     public function show(Banco $banco){
         return view('bancos.show')->with(['banco'=>$banco]);
     }
-    public function create(Banco $banco){
-        return view('bancos.create');
+    public function create(){
+        $banco=new Banco;
+        return view('bancos._form')->with(['banco'=>$banco]);
     }
     public function store(CreateBancosRequest $request){
         //DB::connection()->enableQueryLog();
-        $bancos=New Banco;
-        $bancos->fill($request->all())->save();
+        $banco=Banco::create($request->only('nombre'));
         //dd(DB::getQueryLog());
-        return redirect()->rute('bancos');
+        session()->flash('message','Banco Creado');
+        return redirect()->route('bancoShow',['banco'=>$banco->id]);
+    }
+    public function edit(Banco $banco){
+        return view('bancos._form')->with(['banco'=>$banco]);
+    }
+    public function update(Banco $banco,CreateBancosRequest $request){
+        $banco->update($request->only('nombre'));
+        session()->flash('message','Banco Editado');
+        return redirect()->route('bancoShow',['banco'=>$banco->id]);
+    }
+    public function delete(Banco $banco){
+        $banco->delete();
+        session()->flash('message','Banco Eliminado');
+        return redirect()->route('bancos');
     }
 }

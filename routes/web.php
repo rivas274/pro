@@ -26,3 +26,9 @@ Route::get('/bancos/create', 'BancosController@create')->name('bancosCreate');
 Route::post('/bancos', 'BancosController@store')->name('bancoStore');
 
 Route::get('/bancos/{banco}', 'BancosController@show')->name('bancoShow');
+
+Route::get('/bancos/{banco}/edit', 'BancosController@edit')->name('bancoEdit');
+
+Route::put('/bancos/{banco}', 'BancosController@update')->name('bancoUpdate');
+
+Route::delete('/bancos/{banco}', 'BancosController@delete')->name('bancoDelete');

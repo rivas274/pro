@@ -1,7 +1,6 @@
 const { mix } = require('laravel-mix');
 
-mix.js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue','axios','jquery']).version()
+mix.js('resources/assets/js/app.js', 'public/js').version()
     .sass('resources/assets/sass/app.scss', 'public/css').version()
     .copy('node_modules/font-awesome/fonts/*', 'public/fonts/')
     .browserSync('pro.app');

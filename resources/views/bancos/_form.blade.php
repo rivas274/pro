@@ -1,23 +1,27 @@
 @extends('layouts.app')
 @section('content')
 @component('component.container')
-    @slot('title','Banco')
-    @slot('content')
-        @if(count($errors)>0)
-        <div class='alert alert-danger'>
-        @foreach($errors->getMessages() as $key => $message)
-            {{$key}} => {{json_encode($message)}}
-        @endforeach
-        </div>
+    @slot('title')
+        @if($banco->exists)
+            Editar Banco
+        @else    
+            Crear Banco
         @endif
+    @endslot
+    @slot('content')
+        @if($banco->exists)
+        <form action="{{ route('bancoUpdate',['banco'=>$banco->id]) }}" method="post">
+            {!! method_field('PUT') !!} 
+        @else    
         <form action="{{ route('bancoStore') }}" method="post">
+        @endif
             {!! csrf_field() !!} 
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input  type="text" 
                         class="form-control" 
                         name="nombre" 
-                        value="{{ old('nombre') }}" 
+                        value="{{ $banco->nombre or old('nombre') }}" 
                         placeholder="nombre">
             </div>
             <a href="{{ route('bancos') }}" class="btn">Cancelar</a>
