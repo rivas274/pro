@@ -19,8 +19,8 @@ class CreateProyectosTable extends Migration {
 			$table->float('cauntia', 10, 0);
 			$table->date('fechaInicio');
 			$table->date('fechaFin')->nullable();
-			$table->integer('idCliente')->unsigned();
-            $table->foreign('idCliente')->references('id')->on('clientes')->onDelete('cascade');
+			$table->integer('id_clientes')->unsigned();
+            $table->foreign('id_clientes')->references('id')->on('clientes')->onDelete('cascade');
 			$table->timestamps();
 		});
 	}

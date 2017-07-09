@@ -18,8 +18,8 @@ class CreateClientesTable extends Migration {
 			$table->string('nombre', 45);
 			$table->string('telefono', 15);
 			$table->string('domicilio', 256);
-			$table->integer('idRazonSocial')->unsigned();
-            $table->foreign('idRazonSocial')->references('id')->on('razonesSociales');
+			$table->integer('id_razonesSociales')->unsigned();
+            $table->foreign('id_razonesSociales')->references('id')->on('razonesSociales');
 			$table->timestamps();
 		});
 	}

@@ -18,7 +18,7 @@ class Proyecto extends Model
         'cauntia',
         'fechaInicio',
         'fechaFin',
-        'idCliente'
+        'id_clientes'
     ];
 
     protected $guarded = ['id'];

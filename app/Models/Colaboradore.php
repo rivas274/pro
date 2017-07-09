@@ -18,8 +18,8 @@ class Colaboradore extends Model
         'domicilio',
         'telefono',
         'cuenta',
-        'idBanco',
-        'idRazonSocial'
+        'id_bancos',
+        'id_razonesSociales'
     ];
 
     protected $guarded = ['id'];

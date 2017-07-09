@@ -14,8 +14,8 @@ class ColaboradoresProyecto extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'idProyecto',
-        'idColaborador'
+        'id_proyectos',
+        'id_colaboradores'
     ];
 
     protected $guarded = ['id'];

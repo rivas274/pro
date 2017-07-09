@@ -17,7 +17,7 @@ class Cliente extends Model
         'nombre',
         'telefono',
         'domicilio',
-        'idRazonSocial'
+        'id_razonesSociales'
     ];
 
     protected $guarded = ['id'];

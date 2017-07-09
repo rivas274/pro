@@ -17,9 +17,9 @@ class Pago extends Model
         'concepto',
         'monto',
         'fechaPago',
-        'idProyecto',
-        'idColaborador',
-        'idTipoPago'
+        'id_proyectos',
+        'id_colaboradores',
+        'id_tiposPagos'
     ];
 
     protected $guarded = ['id'];
