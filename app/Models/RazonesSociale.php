@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Cliente;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class RazonesSociale
+ * Class RazonesSocial
  */
-class RazonesSociale extends Model
+class RazonSocial extends Model
 {
     protected $table = 'razonesSociales';
 
@@ -20,5 +21,7 @@ class RazonesSociale extends Model
 
     protected $guarded = ['id'];
 
-        
+    public function Clientes(){
+        return $this->hasMany(Cliente::class);
+    }
 }

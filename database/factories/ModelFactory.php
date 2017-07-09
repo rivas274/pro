@@ -23,9 +23,24 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 $factory->define(App\Models\Banco::class, function (Faker\Generator $faker) {
-    static $password;
     return [
         'nombre' => $faker->name
     ];
     //factory(App\Models\Banco::class,50)->create()
+});
+$factory->define(App\Models\RazonSocial::class, function (Faker\Generator $faker) {
+    return [
+        'prefijo'=> str_random(2),
+        'descripcion'=> $faker->name
+    ];
+});
+$factory->define(App\Models\Cliente::class, function (Faker\Generator $faker) {
+    return [
+        'nombre'=>$faker->sentence,
+        'telefono'=>$faker->phone,
+        'domicilio'=>$faker->sentence,
+        'RazonSocial_id'=>function(){
+            return factory(App\Models\RazonSocial::class)->create()->id;
+        }
+    ];
 });

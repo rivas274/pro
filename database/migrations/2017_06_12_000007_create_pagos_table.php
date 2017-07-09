@@ -19,16 +19,16 @@ class CreatePagosTable extends Migration {
 			$table->float('monto', 10, 2);
 			$table->date('fechaPago');
 
-			$table->integer('idProyecto')->unsigned();
-            $table->foreign('idProyecto')->references('id')->on('proyectos');
+			$table->integer('proyecto_id')->unsigned();
+            $table->foreign('proyecto_id')->references('id')->on('proyectos');
 
-			$table->integer('idColaborador')->unsigned();
-            $table->foreign('idColaborador')->references('id')->on('colaboradores');
+			$table->integer('colaborador_id')->unsigned();
+            $table->foreign('colaborador_id')->references('id')->on('colaboradores');
 
-			$table->integer('idTipoPago')->unsigned();
-            $table->foreign('idTipoPago')->references('id')->on('colaboradores');
+			$table->integer('tipoPago_id')->unsigned();
+            $table->foreign('tipoPago_id')->references('id')->on('tiposPagos');
 
-			$table->index(['idProyecto','idColaborador']);
+			$table->index(['proyecto_id','colaborador_id']);
 			$table->timestamps();
 		});
 	}

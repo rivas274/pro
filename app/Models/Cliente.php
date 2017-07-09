@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\RazonSocial;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -17,10 +18,12 @@ class Cliente extends Model
         'nombre',
         'telefono',
         'domicilio',
-        'idRazonSocial'
+        'RazonSocial_id'
     ];
 
     protected $guarded = ['id'];
 
-        
+    public function RazonSocial(){
+        return $this->belongsTo(RazonSocial::class);
+    }
 }

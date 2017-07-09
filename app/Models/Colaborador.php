@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Colaboradore
+ * Class Colaborador
  */
-class Colaboradore extends Model
+class Colaborador extends Model
 {
     protected $table = 'colaboradores';
 
@@ -18,8 +18,8 @@ class Colaboradore extends Model
         'domicilio',
         'telefono',
         'cuenta',
-        'idBanco',
-        'idRazonSocial'
+        'banco_id',
+        'RazonSocial_id'
     ];
 
     protected $guarded = ['id'];

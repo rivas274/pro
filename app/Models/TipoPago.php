@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class TiposPago
+ * Class TipoPago
  */
-class TiposPago extends Model
+class TipoPago extends Model
 {
     protected $table = 'tiposPagos';
 

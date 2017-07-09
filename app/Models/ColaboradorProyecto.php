@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class ColaboradoresProyecto
+ * Class ColaboradorProyecto
  */
-class ColaboradoresProyecto extends Model
+class ColaboradorProyecto extends Model
 {
     protected $table = 'colaboradoresProyectos';
 
     public $timestamps = true;
 
     protected $fillable = [
-        'idProyecto',
-        'idColaborador'
+        'proyecto_id',
+        'colaborador_id'
     ];
 
     protected $guarded = ['id'];
